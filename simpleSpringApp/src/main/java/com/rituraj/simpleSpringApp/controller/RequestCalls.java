@@ -27,5 +27,10 @@ public class RequestCalls {
         return  "Hello from " + nameDTO.getFirstName() + " " + nameDTO.getLastName();
     }
 
+    @PutMapping
+    public String putHello(@PathVariable String fname, @RequestParam String lname){
+        return  "Hello from " + fname + lname;
+    }
+
 
 }
