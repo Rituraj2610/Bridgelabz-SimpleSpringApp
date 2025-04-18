@@ -1,9 +1,6 @@
 package com.rituraj.simpleSpringApp.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/requestcalls")
@@ -14,8 +11,13 @@ public class RequestCalls {
         return "Hello form bridgelabz";
     }
 
+    @GetMapping
+    public String getHello1(@RequestParam String name){
+        return "Hello form " + name;
+    }
+
     @GetMapping("/{name}")
-    public String getHello(@RequestParam String name){
+    public String getHello2(@PathVariable String name){
         return "Hello form " + name;
     }
 
