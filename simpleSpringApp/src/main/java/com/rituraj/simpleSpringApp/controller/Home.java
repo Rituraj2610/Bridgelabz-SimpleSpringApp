@@ -9,7 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class Home {
 
     @GetMapping("/hello")
-    public String printHello(){
-        return "Hello World";
+    public void printHello(){
+        System.out.println("Hello World");
     }
+
+    @GetMapping("/hello2")
+    public String printHello2(){
+        return "Hello from Bridgelabz";
+    }
+
+
+
 }
