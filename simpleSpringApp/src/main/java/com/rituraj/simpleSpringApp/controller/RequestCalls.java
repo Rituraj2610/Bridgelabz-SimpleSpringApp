@@ -14,7 +14,10 @@ public class RequestCalls {
         return "Hello form bridgelabz";
     }
 
-
+    @GetMapping("/{name}")
+    public String getHello(@RequestParam String name){
+        return "Hello form " + name;
+    }
 
 
 }
